@@ -1,0 +1,38 @@
+{
+  "name": "genpark-3d-gaussian-splatting-radiance-reconstructor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - 3D Gaussian splatting radiance field reconstructor generating real-time 120 FPS view synthesis from sparse camera trajectories.",
+  "author": "genpark",
+  "category": "3d-vision",
+  "tags": [
+    "3dgs",
+    "gaussian-splatting",
+    "radiance-field",
+    "3d-reconstruction",
+    "realtime-neural-render"
+  ],
+  "inputs": {
+    "video_trajectory_mp4_url": {
+      "type": "string"
+    },
+    "splat_target_points_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "reconstruction_job_id": {
+      "type": "string"
+    },
+    "psnr_reconstruction_quality_db": {
+      "type": "number"
+    },
+    "realtime_rendering_fps_metal_cuda": {
+      "type": "integer"
+    },
+    "splat_ply_export_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
